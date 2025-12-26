@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">         
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💛 Nosso Amor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Tela de Entrada -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-content">
+            <div class="splash-heart">
+                <div class="splash-heart-shape"></div>
+            </div>
+            <p class="splash-hint">toque para começar</p>
+        </div>
+    </div>
+
+    <!-- Música de Fundo -->
+    <audio id="bgMusic">
+        <source src="./musica de fundo/Sotam Rob - Foi assim.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Botão de Controle de Música -->
+    <button class="music-control" id="musicControl" title="Pausar música">
+        <i class="fas fa-pause"></i>
+    </button>
+
+    <!-- Letra da Música Flutuante -->
+    <div class="lyrics-container" id="lyricsContainer">
+        <div class="lyrics-text" id="lyricsText"></div>
+    </div>
+
+    <!-- Partículas de fundo -->
+    <canvas id="particles"></canvas>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="stars" id="stars"></div>
+        <div class="hero-content">
+            <!-- Animação de Coração -->
+            <div class="heart-container">
+                <div class="heart-glow"></div>
+                <div class="heart">
+                    <div class="heart-sparkles">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="heart-rings">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="name" id="heroName1"></span>
+                <span class="amp">&</span>
+                <span class="name" id="heroName2"></span>
+            </h1>
+            <p class="hero-subtitle">Uma história escrita a dois</p>
+            <div class="hero-date">29 de Outubro de 2025</div>
+        </div>
+        <a href="#contador" class="scroll-indicator">
+            <span>Descubra mais</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Seção Contador -->
+    <section id="contador" class="section counter-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nosso Tempo Juntos</h2>
+                <p>Cada segundo ao seu lado vale uma eternidade</p>
+            </div>
+            
+            <div class="counter-container">
+                <div class="counter-card">
+                    <span class="counter-number" id="years">0</span>
+                    <span class="counter-label">Anos</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-number" id="months">0</span>
+                    <span class="counter-label">Meses</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-number" id="days">0</span>
+                    <span class="counter-label">Dias</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-number" id="hours">0</span>
+                    <span class="counter-label">Horas</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-number" id="minutes">0</span>
+                    <span class="counter-label">Minutos</span>
+                </div>
+                <div class="counter-card highlight">
+                    <span class="counter-number" id="seconds">0</span>
+                    <span class="counter-label">Segundos</span>
+                </div>
+            </div>
+
+            <div class="date-config">
+                <p>Juntos desde: <strong id="startDateDisplay">01/01/2024</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Galeria -->
+    <section id="galeria" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Galeria</h2>
+                <p>Momentos que guardamos no coração</p>
+            </div>
+
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-filter="all">Todos</button>
+                <button class="tab-btn" data-filter="romantic">Românticos</button>
+                <button class="tab-btn" data-filter="fun">Diversão</button>
+                <button class="tab-btn" data-filter="special">Especiais</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- FOTO 1: Momento Romântico -->
+                <div class="gallery-item" data-category="romantic">
+                    <img src="./fotos/casal.jpg" alt="Momento Romântico">
+                    <div class="gallery-overlay">
+                        <span>Momento Romântico</span>
+                    </div>
+                </div>
+                
+                <!-- FOTO 2: Momento Especial (DESTAQUE - aparece maior) -->
+                <div class="gallery-item featured" data-category="special">
+                    <img src="./fotos/casal1.jpg" alt="Momento Especial">
+                    <div class="gallery-overlay">
+                        <span>Momento Especial</span>
+                    </div>
+                </div>
+                
+                <!-- VÍDEO 1: Coloque o arquivo de vídeo na pasta fotos -->
+                <div class="gallery-item video-item" data-category="fun">
+                    <video src="./fotos/VID-20251224-WA0132.mp4" muted loop playsinline></video>
+                    <div class="video-play-icon"><i class="fas fa-play"></i></div>
+                    <div class="gallery-overlay">
+                        <span>Nosso Momento</span>
+                    </div>
+                </div>
+                
+                <!-- VÍDEO 2: Coloque o arquivo de vídeo na pasta fotos -->
+                <div class="gallery-item video-item" data-category="romantic">
+                    <video src="./fotos/VID-20251224-WA0135.mp4" muted loop playsinline></video>
+                    <div class="video-play-icon"><i class="fas fa-play"></i></div>
+                    <div class="gallery-overlay">
+                        <span>Nosso Amor</span>
+                    </div>
+                </div>
+                
+                <!-- VÍDEO 3: Coloque o arquivo de vídeo na pasta fotos -->
+                <div class="gallery-item video-item" data-category="special">
+                    <video src="./fotos/VID-20251224-WA0136.mp4" muted loop playsinline></video>
+                    <div class="video-play-icon"><i class="fas fa-play"></i></div>
+                    <div class="gallery-overlay">
+                        <span>Momento Especial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Timeline -->
+    <section id="timeline" class="section timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa História</h2>
+                <p>A jornada do nosso amor</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">11 de outubro</span>
+                        <h3>O Primeiro Encontro</h3>
+                        <p>O dia em que nossos olhares se cruzaram e tudo mudou...</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">11 de outubro</span>
+                        <h3>Primeiro Beijo</h3>
+                        <p>O pai é atacante 😎😂</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">07 de novembro</span>
+                        <h3>Oficialmente Juntos</h3>
+                        <p>O início da nossa história oficial de amor...</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">E muito mais...</span>
+                        <h3>O Futuro</h3>
+                        <p>Muitos capítulos ainda por escrever juntos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Frases -->
+    <section id="frases" class="section quotes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>provas que você esta em todo lugar</h2>
+                <p>busquei frases que mostram o quanto você está presente em minha vida</p>
+            </div>
+
+            <div class="quotes-carousel">
+                <button class="carousel-btn prev" id="prevQuote" aria-label="Anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="quotes-wrapper" id="quotesWrapper">
+                    <div class="quote-slide active">
+                        <blockquote>
+                            <p>"O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha."</p>
+                            <cite>— 1 Coríntios 13:4</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"Acima de tudo, porém, revistam-se do amor, que é o elo perfeito."</p>
+                            <cite>— Colossenses 3:14</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"Onde não puderes amar, não te demores."</p>
+                            <cite>— Frida Kahlo</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"O amor não se vê com os olhos, mas com a alma."</p>
+                            <cite>— William Shakespeare</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"Amar não é olhar um para o outro, é olhar juntos na mesma direção."</p>
+                            <cite>— Antoine de Saint-Exupéry</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"As águas profundas não podem apagar o amor; os rios não conseguem levá-lo na correnteza."</p>
+                            <cite>— Cânticos 8:7</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"A medida do amor é amar sem medida."</p>
+                            <cite>— Santo Agostinho</cite>
+                        </blockquote>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>
+                            <p>"O amor é a única loucura de um sábio e a única sabedoria de um louco."</p>
+                            <cite>— Platão</cite>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" id="nextQuote" aria-label="Próximo">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="quotes-dots" id="quotesDots"></div>
+
+            <div class="quote-generator">
+                <button class="btn btn-primary" id="generateQuoteBtn">
+                    <i class="fas fa-magic"></i>
+                    <span>Gerar Frase Romântica</span>
+                </button>
+                <div class="generated-quote" id="generatedQuote"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Jogos -->
+    <section id="jogos" class="section games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jogos do Amor</h2>
+                <p>Diversão para curtir a dois</p>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card" id="quizGameCard">
+                    <div class="game-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Quiz do Casal</h3>
+                    <p>Teste o quanto vocês se conhecem</p>
+                    <span class="game-badge">10 perguntas</span>
+                </div>
+
+                <div class="game-card" id="loveCalcCard">
+                    <div class="game-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Match do Amor</h3>
+                    <p>Descubra sua compatibilidade</p>
+                    <span class="game-badge">Rápido</span>
+                </div>
+
+                <div class="game-card" id="truthDareCard">
+                    <div class="game-icon">
+                        <i class="fas fa-dice"></i>
+                    </div>
+                    <h3>Verdade ou Desafio</h3>
+                    <p>Para momentos divertidos</p>
+                    <span class="game-badge">+50 opções</span>
+                </div>
+
+                <div class="game-card" id="complimentCard">
+                    <div class="game-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Gerador de Elogios</h3>
+                    <p>Surpreenda seu amor</p>
+                    <span class="game-badge">Fofo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Cartas -->
+    <section id="cartas" class="section letters-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cartas de Amor</h2>
+                <p>Palavras escritas com o coração</p>
+            </div>
+
+            <div class="letters-grid">
+                <div class="letter-card" data-letter="1">
+                    <div class="letter-front">
+                        <div class="letter-seal">💛</div>
+                        <span>Clique para abrir</span>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-paper">
+                            <h4>Para o amor da minha vida,</h4>
+                            <p>Cada dia ao seu lado é um presente que o universo me deu. Você ilumina minha vida de uma forma única e especial. Te amo mais do que palavras podem expressar...</p>
+                            <span class="letter-sign">Com todo meu amor 💛</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="letter-card" data-letter="2">
+                    <div class="letter-front">
+                        <div class="letter-seal">✨</div>
+                        <span>Clique para abrir</span>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-paper">
+                            <h4>Meu bem,</h4>
+                            <p>Quando penso em felicidade, penso em você. Quando penso em futuro, você está lá. Você é minha certeza em meio a tantas dúvidas da vida...</p>
+                            <span class="letter-sign">Eternamente seu(a) ✨</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="letter-card" data-letter="3">
+                    <div class="letter-front">
+                        <div class="letter-seal">🌟</div>
+                        <span>Clique para abrir</span>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-paper">
+                            <h4>Querido(a),</h4>
+                            <p>Obrigado(a) por ser meu porto seguro, minha paz e minha maior aventura. Prometo estar ao seu lado em todos os momentos...</p>
+                            <span class="letter-sign">Para sempre 🌟</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Razões -->
+    <section id="razoes" class="section reasons-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Razões Pra Te Amar</h2>
+                <p>Motivos que me fazem te escolher todos os dias</p>
+            </div>
+
+            <div class="reasons-carousel">
+                <div class="reason-card active" data-reason="1">
+                    <span class="reason-number">01</span>
+                    <p>Seu sorriso que ilumina até os dias mais cinzas</p>
+                </div>
+                <div class="reason-card" data-reason="2">
+                    <span class="reason-number">02</span>
+                    <p>A forma como você me faz sentir especial</p>
+                </div>
+                <div class="reason-card" data-reason="3">
+                    <span class="reason-number">03</span>
+                    <p>Sua paciência e compreensão infinitas</p>
+                </div>
+                <div class="reason-card" data-reason="4">
+                    <span class="reason-number">04</span>
+                    <p>O jeito único que você me olha</p>
+                </div>
+                <div class="reason-card" data-reason="5">
+                    <span class="reason-number">05</span>
+                    <p>Como você me conhece melhor que eu mesmo</p>
+                </div>
+                <div class="reason-card" data-reason="6">
+                    <span class="reason-number">06</span>
+                    <p>Seu abraço que é meu lugar favorito no mundo</p>
+                </div>
+                <div class="reason-card" data-reason="7">
+                    <span class="reason-number">07</span>
+                    <p>A forma como você cuida de mim</p>
+                </div>
+                <div class="reason-card" data-reason="8">
+                    <span class="reason-number">08</span>
+                    <p>Sua risada que é a melodia mais linda</p>
+                </div>
+                <div class="reason-card" data-reason="9">
+                    <span class="reason-number">09</span>
+                    <p>Os planos e sonhos que construímos juntos</p>
+                </div>
+                <div class="reason-card" data-reason="10">
+                    <span class="reason-number">10</span>
+                    <p>Simplesmente por você ser você</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-names">
+                    <span id="footerName1">Seu Nome</span>
+                    <span class="footer-amp">&</span>
+                    <span id="footerName2">Nome do Amor</span>
+                </div>
+                <p class="footer-date">Desde <span id="footerDate">2000</span></p>
+                <p class="footer-message">LUTHER 🎩</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões Fixos -->
+    <button class="btn-float btn-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <button class="btn-float btn-surprise" id="surpriseBtn" aria-label="Surpresa">
+        <i class="fas fa-gift"></i>
+    </button>
+
+    <!-- Modais -->
+    <div class="modal" id="quizModal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <div class="quiz-container">
+                <div class="quiz-start" id="quizStart">
+                    <div class="quiz-icon">💑</div>
+                    <h3>Quiz do Casal</h3>
+                    <p>Responda perguntas e descubra o quanto vocês se conhecem!</p>
+                    <button class="btn btn-primary" id="startQuizBtn">Começar</button>
+                </div>
+                <div class="quiz-game hidden" id="quizGameArea">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="quizProgressBar"></div>
+                        </div>
+                        <span id="quizProgressText">1/10</span>
+                    </div>
+                    <div class="quiz-question" id="quizQuestion"></div>
+                    <div class="quiz-options" id="quizOptions"></div>
+                </div>
+                <div class="quiz-result hidden" id="quizResult">
+                    <div class="result-icon" id="resultIcon">🏆</div>
+                    <h3 id="resultTitle">Resultado</h3>
+                    <p class="result-score">Pontuação: <strong id="resultScore">0/10</strong></p>
+                    <p class="result-message" id="resultMessage"></p>
+                    <button class="btn btn-primary" id="restartQuizBtn">Jogar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="loveCalcModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <h3>Match do Amor</h3>
+            <input type="text" placeholder="Seu nome" id="calcName1" class="form-input">
+            <input type="text" placeholder="Nome do amor" id="calcName2" class="form-input">
+            <button class="btn btn-primary" id="calcLoveBtn">Calcular</button>
+            <div class="love-result" id="loveResult"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="truthDareModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <h3>Verdade ou Desafio</h3>
+            <div class="truth-dare-btns">
+                <button class="btn btn-truth" id="truthBtn">Verdade</button>
+                <button class="btn btn-dare" id="dareBtn">Desafio</button>
+            </div>
+            <div class="truth-dare-result" id="truthDareResult"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="complimentModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <h3>Elogio Especial</h3>
+            <div class="compliment-display" id="complimentDisplay">
+                Clique no botão para gerar
+            </div>
+            <button class="btn btn-primary" id="genComplimentBtn">
+                <i class="fas fa-sync-alt"></i> Novo Elogio
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="surpriseModal">
+        <div class="modal-content modal-surprise">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <div class="surprise-content">
+                <h2>Te Amo!</h2>
+                <p id="surpriseMessage">Você é a melhor coisa que aconteceu na minha vida!</p>
+                <div class="surprise-emoji">💛</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
