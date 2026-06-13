@@ -1,0 +1,8 @@
+FOTOS DO ÁLBUM JUNHO 2026 (assets/media/junho2026/)
+
+JÁ ESTÃO AQUI (ok):
+  campo-neon.png   -> vocês deitados no campo verde neon  (CAPA do álbum)
+  de-cabeca.png    -> os dois de cabeça pra baixo
+
+OPCIONAL (mostra ícone enquanto não tiver):
+  audio3am.mp3     -> um áudio/voz de vocês pra memória "Áudio das 3h da manhã"

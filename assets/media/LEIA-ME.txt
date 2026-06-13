@@ -1,0 +1,17 @@
+Coloque aqui as mídias de cada mês, em pastas separadas pelo id do mês:
+
+  assets/media/may2026/primeira-call.png
+  assets/media/june2026/dia12.jpg
+  assets/media/june2026/audio3am.mp3
+  assets/media/july2026/...
+
+Depois aponte esses caminhos no arquivo data/months/<mes><ano>.json.
+
+Extras opcionais:
+  assets/media/<mes><ano>/cover.jpg  -> capa do álbum do mês
+  assets/media/finale.mp3            -> música do final cinematográfico
+
+Formatos: .jpg .png .webp / .mp4 / .mp3 .m4a .ogg
+
+Se um arquivo ainda não existir, o site mostra um ícone no lugar e
+continua funcionando normalmente.

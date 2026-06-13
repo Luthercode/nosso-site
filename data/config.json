@@ -1,0 +1,172 @@
+{
+  "_LEIA": "Este é o ÚNICO arquivo que você edita. Tudo do site está aqui: nomes, datas, meses, fotos, cartas, conquistas, músicas, sonhos e segredos. As imagens/vídeos/áudios você coloca na pasta assets/media/ e aponta o caminho aqui (ex: 'assets/media/maio2026/foto1.jpg'). Dica: cuidado com vírgulas — todo item de uma lista leva vírgula no fim, menos o último.",
+
+  "appName": "Nossa História",
+  "names": { "me": "Luther", "love": "Trinity" },
+  "greetingName": "Trinity",
+  "startDate": "2026-05-20",
+
+  "musica": {
+    "nome": "Trilha Sonora",
+    "descricao": "As nossas músicas, em ordem.",
+    "capa": "",
+    "lista": [
+      { "titulo": "Foi assim", "artista": "Sotam Rob", "arquivo": "assets/media/audios/Sotam Rob - Foi assim.mp3", "capa": "assets/media/maio2026/casal-lua.png", "url": "", "motivo": "Foi assim que tudo começou." },
+      { "titulo": "rises the moon", "artista": "Liana Flores", "arquivo": "assets/media/audios/Liana Flores - rises the moon.mp3", "capa": "assets/media/maio2026/banco-noite.png", "url": "", "motivo": "A música das nossas madrugadas." },
+      { "titulo": "Bloco dos Apaixonados", "artista": "Sotam, Carla Sol & Rob", "arquivo": "assets/media/audios/Sotam Carla Sol Rob - Bloco dos Apaixonados.mp3", "capa": "assets/media/junho2026/campo-neon.png", "url": "", "motivo": "O nosso bloquinho, só nosso." }
+    ]
+  },
+
+  "meses": [
+    {
+      "id": "maio2026",
+      "titulo": "Maio 2026",
+      "subtitulo": "O mês em que tudo começou",
+      "capa": "assets/media/maio2026/casal-lua.png",
+      "cor": "#1db954",
+      "horasEmCall": 38,
+      "memes": 14,
+      "jogos": ["Roblox"],
+      "filmes": [],
+      "memeDoMes": "Yamete kudasai",
+      "melhorMomento": "O pedido de namoro, dia 20 de maio.",
+      "carta": {
+        "titulo": "Carta de Maio",
+        "data": "2026-05-20",
+        "texto": "Meu amor,\n\nEu entrei naquele servidor pra jogar uma última vez. Você apareceu com um 'yamete kudasai' e bagunçou todos os meus planos.\n\nObrigado por ter corrido atrás de mim quando eu fugi. Obrigado por ter ficado.\n\nTe amo."
+      },
+      "musica": { "titulo": "Foi assim", "artista": "Sotam Rob", "motivo": "A primeira música que virou nossa.", "url": "" },
+      "memorias": [
+        { "tipo": "print", "titulo": "O pedido de namoro 💍", "data": "2026-05-20", "arquivo": "assets/media/maio2026/pedido-namoro.png", "texto": "As cartinhas onde tudo virou oficial — 'aceita namorar comigo?'. O dia em que a gente deixou de ser 'quase' e virou 'nós'.", "tags": ["origins", "favoritos"] },
+        { "tipo": "foto", "titulo": "Nós dois sob a lua 🌙", "data": "2026-05-20", "arquivo": "assets/media/maio2026/casal-lua.png", "texto": "Eu e você no campo, com a lua só pra gente.", "tags": ["favoritos", "saudades"] },
+        { "tipo": "foto", "titulo": "Nosso cantinho à noite", "data": "2026-05-19", "arquivo": "assets/media/maio2026/banco-noite.png", "texto": "O banquinho, a lanterna e a gente. Lugar favorito.", "tags": ["favoritos", "calls"] },
+        { "tipo": "foto", "titulo": "A primeira foto que ela me mandou 💛", "data": "2026-05-04", "arquivo": "assets/media/maio2026/trinity-primeira-foto.jpg", "texto": "A primeira vez que vi o rosto por trás da minha rainha. Meu coração parou.", "tags": ["favoritos", "origins"] },
+        { "tipo": "foto", "titulo": "A primeira foto que eu mandei 😅", "data": "2026-05-02", "arquivo": "assets/media/maio2026/luther-primeira-foto.jpg", "texto": "Mandei essa torcendo pra ela não sumir. Deu super certo.", "tags": ["favoritos", "origins"] },
+        { "tipo": "texto", "titulo": "A primeira vez que ri sozinho", "data": "2026-05-08", "arquivo": "", "texto": "Lembrei de uma coisa que você falou e ri sozinho no meio do nada. Foi aí que eu percebi que tava perdido por você.", "tags": ["calls", "saudades"] },
+        { "tipo": "texto", "titulo": "Sua voz", "data": "2026-05-12", "arquivo": "", "texto": "Eu podia te ouvir falar por horas sobre qualquer coisa. Sua voz virou o meu som favorito.", "tags": ["calls", "madrugadas"] },
+        { "tipo": "texto", "titulo": "Yamete Kudasai", "data": "2026-05-02", "arquivo": "", "texto": "As duas palavras que iniciaram tudo. Eu achei que você era uma criança, entrei em pânico e saí correndo. Você veio atrás.", "tags": ["origins", "engracados"] }
+      ],
+      "conquistas": [
+        { "nome": "Yamete Kudasai", "icone": "🎮", "data": "2026-05-02", "descricao": "Vocês se conheceram dentro do Roblox.", "raridade": "Lendária" },
+        { "nome": "Primeira call", "icone": "📞", "data": "2026-05-05", "descricao": "A primeira call de madrugada.", "raridade": "Rara" },
+        { "nome": "Pedido de namoro", "icone": "💍", "data": "2026-05-20", "descricao": "O dia em que tudo ficou oficial.", "raridade": "Lendária" }
+      ]
+    },
+    {
+      "id": "junho2026",
+      "titulo": "Junho 2026",
+      "subtitulo": "Nosso primeiro Dia dos Namorados",
+      "capa": "assets/media/junho2026/campo-neon.png",
+      "cor": "#7c4dff",
+      "horasEmCall": 52,
+      "memes": 23,
+      "jogos": ["Roblox", "Minecraft"],
+      "filmes": ["Nosso primeiro filme"],
+      "memeDoMes": "O print que a gente riu por três dias",
+      "melhorMomento": "O primeiro Dia dos Namorados, 12 de junho.",
+      "carta": {
+        "titulo": "Carta de Junho",
+        "data": "2026-06-12",
+        "texto": "Oi, vida.\n\nNosso primeiro Dia dos Namorados. Pode parecer pouco tempo, mas dentro de mim parece que já vivemos mil temporadas.\n\nVocê é minha música em repeat.\n\nTe amo infinito."
+      },
+      "musica": { "titulo": "Bloco dos Apaixonados", "artista": "Sotam, Carla Sol & Rob", "motivo": "O nosso bloquinho.", "url": "" },
+      "memorias": [
+        { "tipo": "foto", "titulo": "Brilhando juntos 💛", "data": "2026-06-15", "arquivo": "assets/media/junho2026/campo-neon.png", "texto": "Deitados no campo, brilhando. Eu e você.", "tags": ["favoritos", "calls"] },
+        { "tipo": "foto", "titulo": "De cabeça pra baixo por você", "data": "2026-06-09", "arquivo": "assets/media/junho2026/de-cabeca.png", "texto": "A gente sempre dá um jeito de fazer rir.", "tags": ["engracados"] },
+        { "tipo": "texto", "titulo": "Saudade tem nome", "data": "2026-06-18", "arquivo": "", "texto": "Descobri que saudade tem nome, e é o seu. Conta os dias comigo até a gente se ver?", "tags": ["saudades"] }
+      ],
+      "conquistas": [
+        { "nome": "Primeiro Dia dos Namorados", "icone": "💘", "data": "2026-06-12", "descricao": "O primeiro 12 de junho de muitos.", "raridade": "Lendária" },
+        { "nome": "Primeiro filme juntos", "icone": "🎬", "data": "2026-06-06", "descricao": "Sessão de cinema à distância.", "raridade": "Rara" }
+      ]
+    }
+  ],
+
+  "playlists": [
+    { "id": "yamete", "emoji": "🎮", "nome": "Yamete Kudasai", "descricao": "Onde tudo começou.", "tags": ["origins"], "gradiente": ["#1db954", "#0a3d1f"] },
+    { "id": "madrugadas", "emoji": "🌙", "nome": "Madrugadas", "descricao": "As horas que o relógio marcava e a gente ignorava.", "tags": ["madrugadas"], "gradiente": ["#7c4dff", "#1a0a3d"] },
+    { "id": "engracados", "emoji": "😂", "nome": "Momentos Engraçados", "descricao": "As risadas que ninguém mais entenderia.", "tags": ["engracados"], "gradiente": ["#ffb347", "#3d2a0a"] },
+    { "id": "calls", "emoji": "📞", "nome": "Nossas Calls", "descricao": "Minha voz favorita do outro lado.", "tags": ["calls"], "gradiente": ["#4dd0e1", "#0a2e3d"] },
+    { "id": "saudades", "emoji": "💭", "nome": "Saudades", "descricao": "Para os dias em que a distância pesa.", "tags": ["saudades"], "gradiente": ["#f06292", "#3d0a1f"] },
+    { "id": "futuro", "emoji": "🌎", "nome": "Nosso Futuro", "descricao": "Tudo que ainda vamos viver juntos.", "tags": ["futuro"], "gradiente": ["#64b5f6", "#0a1a3d"] },
+    { "id": "favoritos", "emoji": "❤️", "nome": "Memórias Favoritas", "descricao": "As memórias que você curtiu com ❤.", "tags": ["__favorites__"], "gradiente": ["#1db954", "#7c4dff"] }
+  ],
+
+  "album": {
+    "id": "roblox-origins",
+    "emoji": "🎮",
+    "titulo": "The Corner",
+    "descricao": "O servidor que mudou nossas vidas.",
+    "ano": "2026",
+    "gradiente": ["#1db954", "#062b14"],
+    "cenas": [
+      { "texto": "Tudo começou dentro do Roblox." },
+      { "texto": "Ela era uma novata." },
+      { "texto": "Eu era um veterano prestes a sair." },
+      { "texto": "Então apareceu:" },
+      { "texto": "“yamete kudasai”", "grande": true },
+      { "texto": "Até hoje não acredito que essas palavras iniciaram tudo." },
+      { "texto": "Achei que ela era uma criança. Entrei em pânico. Saí correndo." },
+      { "texto": "Ela veio atrás." },
+      { "texto": "Explicou que não era." },
+      { "texto": "Conversamos." },
+      { "texto": "Viramos amigos.", "midia": { "tipo": "foto", "arquivo": "assets/media/maio2026/banco-noite.png" } },
+      { "texto": "Depois algo mais." },
+      { "texto": "E hoje estamos juntos.", "grande": true },
+      { "texto": "Mesmo à distância, sinto ela presente em todos os lugares." }
+    ]
+  },
+
+  "futuro": {
+    "lugares": [
+    ],
+    "metas": [
+      { "titulo": "Nos vermos pessoalmente", "descricao": "O abraço que a tela nunca vai conseguir dar.", "feito": false, "data": "" },
+      { "titulo": "Morar na mesma cidade", "descricao": "Acordar e dormir perto um do outro.", "feito": false, "data": "" },
+      { "titulo": "Maratonar uma série inteira juntos", "descricao": "Sem pular a abertura.", "feito": true, "data": "2026-06-06" },
+      { "titulo": "Adotar um pet", "descricao": "Nosso primeiro filho de quatro patas.", "feito": false, "data": "" },
+      { "titulo": "Passar um Natal juntos", "descricao": "Ceia, presentes e a gente.", "feito": false, "data": "" },
+      { "titulo": "Ver o nascer do sol juntos", "descricao": "Pessoalmente.", "feito": false, "data": "" }
+    ]
+  },
+
+  "_segredos_ajuda": "Arquivo Confidencial (abre com a senha 'yamete'). Para adicionar um segredo, copie o modelo abaixo pra dentro de 'segredos': { \"tipo\": \"foto\", \"titulo\": \"\", \"texto\": \"\", \"arquivo\": \"assets/media/...\", \"data\": \"2026-07-01\" }. tipo pode ser: foto, print, video ou texto (texto deixa 'arquivo' vazio).",
+  "segredos": [
+  ],
+
+  "frasesDoDia": [
+    "Se eu pudesse voltar naquele servidor, eu ficaria mais um pouco.",
+    "Yamete kudasai — as palavras que mudaram tudo.",
+    "Mesmo à distância, eu sinto você presente em todos os lugares.",
+    "Você transformou um simples jogo na melhor história da minha vida.",
+    "Cada madrugada com você vale mais que qualquer sono.",
+    "Meu lugar favorito é qualquer call com você.",
+    "Você é a única notificação que eu sempre quero receber.",
+    "Distância é só um detalhe pra quem se escolhe todo dia.",
+    "Se amar você é errado, eu não quero estar certo.",
+    "Meu coração tem o seu nome em todas as páginas.",
+    "Eu não acredito em sorte, mas acredito em ter te encontrado."
+  ],
+  "curiosidades": [
+    "Tudo começou com um 'yamete kudasai' dentro do Roblox.",
+    "Eu era um veterano prestes a sair. Ela era uma novata.",
+    "No primeiro dia, eu entrei em pânico e saí correndo. Ela veio atrás.",
+    "Primeiro viramos amigos. Depois, algo mais. Hoje, tudo.",
+    "Nosso aniversário de namoro é dia 20 de maio.",
+    "A nossa primeira música foi 'Foi assim', do Sotam Rob.",
+    "Já passamos noites inteiras só ouvindo um ao outro na call.",
+    "O cocar e o estilo dela no Roblox são marca registrada.",
+    "Luther é @Rip_Excalibur e Trinity é @Trinitygg2371. 💚"
+  ],
+  "finale": {
+    "music": "assets/media/finale.mp3",
+    "lines": [
+      "Se eu pudesse voltar naquele servidor…",
+      "Eu ficaria mais um pouco.",
+      "Porque naquele dia…",
+      "Eu encontrei você."
+    ],
+    "title": "❤️ Feliz Dia dos Namorados ❤️",
+    "outro": "Obrigado por transformar um simples jogo na melhor história da minha vida."
+  }
+}

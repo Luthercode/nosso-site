@@ -1,0 +1,14 @@
+FOTOS DO ÁLBUM MAIO 2026 (assets/media/maio2026/)
+
+JÁ ESTÃO AQUI (ok):
+  casal-lua.png             -> vocês dois sob a lua  (CAPA do álbum)
+  pedido-namoro.png         -> as cartinhas do pedido de namoro
+  banco-noite.png           -> o banquinho à noite
+  trinity-primeira-foto.jpg -> 1ª foto que a Trinity mandou
+  luther-primeira-foto.jpg  -> 1ª foto que o Luther mandou
+
+FALTA VOCÊ SALVAR (eu não consigo gravar imagem do chat):
+  piano-por-do-sol.png  -> a foto de vocês no PIANO ao pôr do sol (Roblox)
+
+Salve com EXATAMENTE esse nome. Se salvar como .jpg, troque a extensão
+no data/config.json.
